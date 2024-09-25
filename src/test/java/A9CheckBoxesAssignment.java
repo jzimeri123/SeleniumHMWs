@@ -33,11 +33,10 @@ public class A9CheckBoxesAssignment {
         //Select your interests
      WebElement supportChBx= driver.findElement(By.xpath("//input[@value='Support']"));
      WebElement musicChBx= driver.findElement(By.xpath("//input[@value='Music']"));
-        System.out.println("Support checkbox is disbplayed? "+supportChBx.isDisplayed()+ "  Music checkbox is displayed? "+musicChBx.isDisplayed());
-
-        WebElement showChBx= driver.findElement(By.xpath("//button[@class='btn btn-default']"));
-        showChBx.click();
-
+       if(!supportChBx.isDisplayed()&&!musicChBx.isDisplayed()){
+           WebElement showChBx= driver.findElement(By.xpath("//button[@class='btn btn-default']"));
+           showChBx.click();
+       }
         Thread.sleep(1000);
         musicChBx.click();
 
